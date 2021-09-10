@@ -26,6 +26,7 @@ package com.bernardomg.example.oauth.resource;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * Application runnable class. This allows Spring Boot to run the application.
@@ -34,6 +35,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
+@EnableDiscoveryClient
 public class Application {
 
     /**
