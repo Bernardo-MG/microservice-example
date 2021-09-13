@@ -20,7 +20,7 @@
    <!-- ********************************************** -->
 
    <groupId>com.bernardomg.example.microservice</groupId>
-   <artifactId>microservice-gateway-example</artifactId>
+   <artifactId>microservice-example</artifactId>
    <version>0.0.1-SNAPSHOT</version>
    <packaging>war</packaging>
 
@@ -225,8 +225,8 @@
       <mockito.version>3.11.2</mockito.version>
       <slf4j.version>1.7.32</slf4j.version>
       <spring.boot.version>2.5.3</spring.boot.version>
-      <spring.cloud.dependencies.version>Hoxton.SR12</spring.cloud.dependencies.version>
-      <spring.data.bom.version>2020.0.7</spring.data.bom.version>
+      <spring.cloud.dependencies.version>2020.0.3</spring.cloud.dependencies.version>
+      <spring.data.bom.version>2021.0.4</spring.data.bom.version>
       <spring.version>5.3.9</spring.version>
       <!-- ============================================== -->
       <!-- ============== PLUGINS VERSIONS ============== -->
@@ -358,6 +358,11 @@
          <!-- Spring Cloud Starter: Eureka Config -->
          <groupId>org.springframework.cloud</groupId>
          <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+      </dependency>
+      <dependency>
+         <!-- Spring Cloud Starter: Bootstrap -->
+         <groupId>org.springframework.cloud</groupId>
+         <artifactId>spring-cloud-starter-bootstrap</artifactId>
       </dependency>
       <!-- ============================================== -->
       <!-- =============== SPRING BOOT ================== -->
