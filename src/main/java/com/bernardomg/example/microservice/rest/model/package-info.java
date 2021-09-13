@@ -23,7 +23,9 @@
  */
 
 /**
- * Configuration classes.
+ * Model classes.
+ * <p>
+ * These represent the main sets of data which the application works with.
  */
 
-package com.bernardomg.example.oauth.resource.config;
+package com.bernardomg.example.microservice.rest.model;

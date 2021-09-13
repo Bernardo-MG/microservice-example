@@ -22,12 +22,25 @@
  * SOFTWARE.
  */
 
-/**
- * Services.
- * <p>
- * While in the MVC architecture all the logic seems to be contained inside the
- * controllers, using an additional layer of services helps to isolate all the
- * important logic in the application.
- */
+package com.bernardomg.example.microservice.rest.service;
 
-package com.bernardomg.example.oauth.resource.service;
+import com.bernardomg.example.microservice.rest.model.ExampleEntity;
+
+/**
+ * Service for the example entity domain.
+ * <p>
+ * This is a domain service just to allow the endpoints querying the entities
+ * they are asked for.
+ *
+ * @author Bernardo Mart&iacute;nez Garrido
+ */
+public interface ExampleEntityService {
+
+    /**
+     * Returns all the entities from the DB.
+     * 
+     * @return the persisted entities
+     */
+    public Iterable<? extends ExampleEntity> getAllEntities();
+
+}

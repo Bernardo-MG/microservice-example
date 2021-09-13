@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.example.oauth.resource.response;
+package com.bernardomg.example.microservice.rest.response;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 

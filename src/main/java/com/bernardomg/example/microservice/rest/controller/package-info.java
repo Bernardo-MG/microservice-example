@@ -23,9 +23,7 @@
  */
 
 /**
- * Model classes.
- * <p>
- * These represent the main sets of data which the application works with.
+ * Controller classes.
  */
 
-package com.bernardomg.example.oauth.resource.model;
+package com.bernardomg.example.microservice.rest.controller;

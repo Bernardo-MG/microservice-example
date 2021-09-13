@@ -23,7 +23,7 @@
  */
 
 /**
- * Controller classes.
+ * Response classes.
  */
 
-package com.bernardomg.example.oauth.resource.controller;
+package com.bernardomg.example.microservice.rest.response;

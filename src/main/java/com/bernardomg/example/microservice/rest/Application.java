@@ -22,31 +22,37 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.example.oauth.resource.config;
+package com.bernardomg.example.microservice.rest;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
- * Web configuration.
+ * Application runnable class. This allows Spring Boot to run the application.
  * 
  * @author Bernardo Mart&iacute;nez Garrido
  *
  */
-@Configuration
-public class WebConfiguration implements WebMvcConfigurer {
+@SpringBootApplication
+@EnableDiscoveryClient
+public class Application {
+
+    /**
+     * Runnable main method.
+     * 
+     * @param args
+     *            execution parameters
+     */
+    public static void main(final String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 
     /**
      * Default constructor.
      */
-    public WebConfiguration() {
+    public Application() {
         super();
-    }
-
-    @Override
-    public void addCorsMappings(final CorsRegistry registry) {
-        registry.addMapping("/**");
     }
 
 }

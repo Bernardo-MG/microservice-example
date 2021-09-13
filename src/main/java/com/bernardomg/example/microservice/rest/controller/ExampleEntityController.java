@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.example.oauth.resource.controller;
+package com.bernardomg.example.microservice.rest.controller;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
@@ -31,10 +31,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bernardomg.example.oauth.resource.model.ExampleEntity;
-import com.bernardomg.example.oauth.resource.response.DefaultResponse;
-import com.bernardomg.example.oauth.resource.response.Response;
-import com.bernardomg.example.oauth.resource.service.ExampleEntityService;
+import com.bernardomg.example.microservice.rest.model.ExampleEntity;
+import com.bernardomg.example.microservice.rest.response.DefaultResponse;
+import com.bernardomg.example.microservice.rest.response.Response;
+import com.bernardomg.example.microservice.rest.service.ExampleEntityService;
 
 /**
  * Rest controller for the example entities.

@@ -22,48 +22,35 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.example.oauth.resource.model;
+package com.bernardomg.example.microservice.rest.persistence.repository;
 
-import java.io.Serializable;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.bernardomg.example.microservice.rest.model.PersistentExampleEntity;
 
 /**
- * A simple entity to be used as an example.
+ * Spring-JPA repository for {@link PersistentExampleEntity}.
+ * <p>
+ * This is a simple repository just to allow the endpoints querying the entities
+ * they are asked for.
  *
  * @author Bernardo Mart&iacute;nez Garrido
  */
-public interface ExampleEntity extends Serializable {
+public interface ExampleEntityRepository
+        extends JpaRepository<PersistentExampleEntity, Integer> {
 
     /**
-     * Returns the identifier assigned to this entity.
-     * <p>
-     * If no identifier has been assigned yet, then the value is expected to be
-     * {@code null} or lower than zero.
-     *
-     * @return the entity's identifier
-     */
-    public Integer getId();
-
-    /**
-     * Returns the name of the entity.
-     *
-     * @return the entity's name
-     */
-    public String getName();
-
-    /**
-     * Sets the identifier assigned to this entity.
-     *
-     * @param identifier
-     *            the identifier for the entity
-     */
-    public void setId(final Integer identifier);
-
-    /**
-     * Changes the name of the entity.
-     *
+     * Returns all entities with a partial match to the name.
+     * 
      * @param name
-     *            the name to set on the entity
+     *            name for searching
+     * @param page
+     *            pagination to apply
+     * @return all entities at least partially matching the name
      */
-    public void setName(final String name);
+    public Page<PersistentExampleEntity> findByNameContaining(final String name,
+            final Pageable page);
 
 }

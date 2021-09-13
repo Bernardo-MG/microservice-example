@@ -22,15 +22,15 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.example.oauth.resource.service;
+package com.bernardomg.example.microservice.rest.service;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bernardomg.example.oauth.resource.model.PersistentExampleEntity;
-import com.bernardomg.example.oauth.resource.persistence.repository.ExampleEntityRepository;
+import com.bernardomg.example.microservice.rest.model.PersistentExampleEntity;
+import com.bernardomg.example.microservice.rest.persistence.repository.ExampleEntityRepository;
 
 /**
  * Default implementation of the example entity service.

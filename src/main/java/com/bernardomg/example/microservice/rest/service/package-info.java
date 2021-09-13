@@ -22,34 +22,12 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.example.oauth.resource.response;
-
-import com.fasterxml.jackson.annotation.JsonValue;
-
 /**
- * Response status.
- * 
- * @author Bernardo Mart&iacute;nez Garrido
- *
+ * Services.
+ * <p>
+ * While in the MVC architecture all the logic seems to be contained inside the
+ * controllers, using an additional layer of services helps to isolate all the
+ * important logic in the application.
  */
-public enum ResponseStatus {
 
-    /**
-     * The request failed.
-     */
-    FAILURE,
-    /**
-     * The request was a success.
-     */
-    SUCCESS,
-    /**
-     * The request generated warnings.
-     */
-    WARNING;
-
-    @JsonValue
-    public final String getValue() {
-        return toString().toLowerCase();
-    }
-
-}
+package com.bernardomg.example.microservice.rest.service;

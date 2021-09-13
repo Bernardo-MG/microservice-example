@@ -22,35 +22,30 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.example.oauth.resource.persistence.repository;
-
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.bernardomg.example.oauth.resource.model.PersistentExampleEntity;
+package com.bernardomg.example.microservice.rest.response;
 
 /**
- * Spring-JPA repository for {@link PersistentExampleEntity}.
- * <p>
- * This is a simple repository just to allow the endpoints querying the entities
- * they are asked for.
- *
+ * Response to the frontend.
+ * 
  * @author Bernardo Mart&iacute;nez Garrido
+ *
+ * @param <T>
+ *            response content type
  */
-public interface ExampleEntityRepository
-        extends JpaRepository<PersistentExampleEntity, Integer> {
+public interface Response<T> {
 
     /**
-     * Returns all entities with a partial match to the name.
+     * Returns the response content.
      * 
-     * @param name
-     *            name for searching
-     * @param page
-     *            pagination to apply
-     * @return all entities at least partially matching the name
+     * @return the response content
      */
-    public Page<PersistentExampleEntity> findByNameContaining(final String name,
-            final Pageable page);
+    public T getContent();
+
+    /**
+     * Returns the response status.
+     * 
+     * @return the response status
+     */
+    public ResponseStatus getStatus();
 
 }
