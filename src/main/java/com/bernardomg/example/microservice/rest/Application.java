@@ -34,7 +34,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @author Bernardo Mart&iacute;nez Garrido
  *
  */
-@SpringBootApplication
+@SpringBootApplication(exclude = {
+        org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration.class })
 @EnableDiscoveryClient
 public class Application {
 
